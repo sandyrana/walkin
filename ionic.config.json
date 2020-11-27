@@ -1,0 +1,7 @@
+{
+  "name": "walkin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

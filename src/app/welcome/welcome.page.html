@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+ <div id="container">
+ 	
+ <ion-card *ngIf="test">
+
+ 	 <div class="profile-picture big-profile-picture">
+            <img src="{{test.picture}}">
+     </div>
+
+      <h2 class="profile-name dark">{{test.username}}</h2>
+      <div class="profile-info">{{test.email}}</div>
+ 	
+ 	<!-- <ion-card-header>{{test.pic}}</ion-card-header> -->
+ </ion-card>
+   
+  </div>
+
+</ion-content>
