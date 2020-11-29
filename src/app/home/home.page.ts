@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,NgZone } from '@angular/core';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 import { NavController } from '@ionic/angular';
 import { Router,NavigationExtras } from '@angular/router';
+
 
 
 @Component({
@@ -9,10 +10,20 @@ import { Router,NavigationExtras } from '@angular/router';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
-  abc:any;
-  constructor(private router: Router,public fb : Facebook) {}
+export class HomePage {  
+  constructor(
+    private ngZone: NgZone,
+    private router: Router,
+    public fb : Facebook
+   ){ 
 
+
+
+  } 
+      
+  
+
+  
   login() {
 
 
@@ -34,15 +45,7 @@ export class HomePage {
     }
 
     });
-  });
-
-
-
-
-
-
-
-    
+  }); 
     
     }    
 

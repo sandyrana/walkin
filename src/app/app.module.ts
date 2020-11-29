@@ -6,6 +6,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Facebook} from '@ionic-native/facebook/ngx';
+import { Stepcounter } from '@ionic-native/stepcounter/ngx';
+import { Pedometer } from '@ionic-native/pedometer/ngx';
 
 
 import { AppComponent } from './app.component';
@@ -19,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     StatusBar,
     SplashScreen,
     Facebook,
+    Stepcounter,
+    Pedometer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
