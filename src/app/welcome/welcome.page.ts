@@ -24,17 +24,24 @@ constructor(private router: Router, private stepcounter: Stepcounter) {
   this.test = state;
 
 
-  let startingOffset = 0;
- 
+ let startingOffset = 0;
+
   this.stepcounter.start(startingOffset).then(onSuccess => 
+    
     console.log('stepcounter-start success', onSuccess), 
+    
     onFailure => console.log('stepcounter-start error', onFailure));
 
   this.stepcounter.getHistory().then(historyObj => 
     console.log('stepcounter-history success', historyObj), 
     onFailure => console.log('stepcounter-history error', onFailure));
-
-    console.log(this.stepcounter)
+ 
+    
+    console.log(JSON.stringify(stepcounter.getStepCount()));
+    console.log(JSON.stringify(stepcounter.getTodayStepCount()));
+    console.log(JSON.stringify(stepcounter.deviceCanCountSteps()));
+    console.log(JSON.stringify(stepcounter.getHistory()));
+   
 }
 
 
